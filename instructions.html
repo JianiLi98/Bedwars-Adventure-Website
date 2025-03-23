@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Instructions</title>
+    <link rel="stylesheet" href="stylingBedwars.css">
+    <script src="instructions.js"></script>
+</head>
+
+<body id="HTPbody">
+    <header>
+        <h1 class="bedwarsBanner">
+            <a href="homepage.html"><img src="bedwar banner.png" alt="Bedwars Banner Title"></a>
+        </h1>
+        <div class="HTPheading">
+            <h1>How To Play</h1>
+            <h2>Follow the step by step guide to be a winner in Bedwars!</h2>
+        </div>
+    </header>
+
+    <aside id="content_sidebar" class="sidebar">
+        <button id="closeButton" onclick="closeSidebar()">Close Menu</button>
+        <div><a class="menu_list" href="homepage.html">Homepage</a></div>
+        <div><a class="menu_list" href="instructions.html">How to Play</a></div>
+        <div><a class="menu_list" href="specialcalculation.html">Items Store</a></div>
+        <div><a class="menu_list" href="quiz.html">Play the Quiz</a></div>
+    </aside>
+
+    <div id="main">
+        <button id="openButton" onclick="openSidebar()">Menu</button>
+    </div>
+
+
+
+    <nav class="steps" id="nav">
+        <button id="step1" class="stepLink active" onclick="openStep(event, 'welcome')">
+            <span style="color: white;">1. Welcome</span>
+        </button>
+
+        <button id="step2" class="stepLink" onclick="openStep(event, 'basic')">
+            <span style="color: white;">2. Basic Rules</span>
+        </button>
+
+        <button id="step3" class="stepLink" onclick="openStep(event, 'start')">
+            <span style="color: white;">3. Starting up</span>
+        </button>
+
+        <button id="step4" class="stepLink" onclick="openStep(event, 'gameplay')">
+            <span style="color: white;">4. Gameplay</span>
+        </button>
+
+        <button id="step5" class="stepLink" onclick="openStep(event, 'upgrade')">
+            <span style="color: white;">5. Upgrade & Purchas</span>
+        </button>
+
+        <button id="step6" class="stepLink" onclick="openStep(event, 'tips')">
+            <span style="color: white;">Tips</span>
+        </button>
+
+        <button id="step7" class="stepLink" onclick="openStep(event, 'end')">
+            <img src="victory.jpeg" alt="Victory sign in Bedwars." width="100%">
+        </button>
+    </nav>
+
+
+    <main id="mainContent">
+        <section id="welcome" class="stepContent">
+            <h2>Step 1: Welcome to Bedwars!</h2>
+
+            <h3>Are u ready?</h3>
+            <p>Follow the five steps to learn and start your victory journey in Bedwars,
+                a highly interactive and exhilarating video game that can build your tactical skill.
+                Simply click on the buttons in the right-bottom corner and navigate through each step.
+                Or click on any step on the side navigation menu to freely explore!
+            </p>
+
+            <h3>How to enter a game?</h3>
+            <ol>
+                <li>Launch Minecraft on your device.</li>
+                <li>Select “Multiplayer” on the main menu.</li>
+                <div class="imgLink">
+                    <img src="minecraftTitle.jpeg" alt="A classic title of Minecraft and Bedwars" width="20%">
+                    <a
+                        href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fhypixel.net%2Fthreads%2Fbedwars-modes.1344128%2F&psig=AOvVaw1-hwZAwQfWewiqmZWDj2ik&ust=1716212852223000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCPDprqPtmYYDFQAAAAAdAAAAABAE">Image
+                        Source - Minecraft Title</a>
+                </div>
+
+                <li>Join a server: you will need to select a public server, such as Hypixel.</li>
+                <li>Enter Bedwars: once connected, you might be in the server’s lobby. Find the Bedwars portal/sign.
+                </li>
+
+                <div class="imgLink">
+                    <img src="joinServer.jpeg" alt="A picture showing the button to join a Bedwars server" width="20%">
+                    <a
+                        href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fsupport.hypixel.net%2Fhc%2Fen-us%2Farticles%2F360019495360-How-to-Join-the-Hypixel-Server&psig=AOvVaw17F3jeYBOCSQy9JdcTwh_7&ust=1716212783662000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOi44uLzmYYDFQAAAAAdAAAAABAJ">Image
+                        Source - Joining Server</a>
+                </div>
+
+                <div class="imgLink">
+                    <img src="bedSign.png" alt="The sign for Bedwars in the lobby" width="20%">
+                    <a
+                        href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.wikihow.com%2FPlay-Minecraft-Bed-Wars&psig=AOvVaw17F3jeYBOCSQy9JdcTwh_7&ust=1716212783662000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCOi44uLzmYYDFQAAAAAdAAAAABAS">Image
+                        Source - Bedwars Sign</a>
+                </div>
+
+                <li>Select mode: there are different modes like solo, doubles, 3v3v3v3, 4v4v4v4. Choose your preferred
+                    mode.</li>
+                <li>Join a match: after clicking on the sign and selecting your mode, you will be put in a lobby and
+                    wait for other players to join.</li>
+            </ol>
+
+            <button class="next" onclick="nextStep('basic', 'step2')">Next &raquo;</button>
+        </section>
+
+
+
+        <section id="basic" class="stepContent">
+            <h2>Step 2: Basic rules that you need to know</h2>
+
+            <h3>Setup</h3>
+            <p>A match will have various number of teams based on the mode you chose, for each team:</p>
+            <ul>
+                <li>Usually 2 members;</li>
+                <li>Each team starts on a separate island with a bed and a resource generator.</li>
+            </ul>
+
+            <h3>Objective</h3>
+            <ul>
+                <li>Protect your team's bed while trying to destroy other teams' beds.</li>
+                <li>You can keep respawning as long as your bed still exists. If your bed is destroyed, you cannot
+                    respawn again (one life left);</li>
+                <li>Once you destroy another team's bed, you can kill the players on that team since they cannot respawn
+                    again.</li>
+                <li>The last team that survives in the game wins.</li>
+            </ul>
+
+            <button class="prev" onclick="nextStep('welcome', 'step1')">&laquo; Previous
+            </button>
+            <button class="next" onclick="nextStep('start', 'step3')">Next &raquo;
+            </button>
+        </section>
+
+
+
+        <section id="start" class="stepContent">
+            <h2>Step 3: Starting the game</h2>
+
+            <h3>Spawning</h3>
+            <p>At the beginning of the game, each person will spawn on an island with a bed.</p>
+
+            <h3>Initialising resources</h3>
+            <ul>
+                <li>Each island contains a “resource generator” that will generate resources
+                    (e.g. iron and gold)</li>
+                <li>As soon as you spawn, starting collecting resources.</li>
+                <li>You can use them to buy equipment such as weapons, armor or defensive
+                    materials for bed protection.</li>
+            </ul>
+            <div class="imgLink">
+                <img src="spawn.webp" alt="A picture of the environment of the map after spawning." width="30%">
+                <a href="https://static.planetminecraft.com/files/image/minecraft/project/2020/101/13317068_xl.webp">Image
+                    Source - Map after Spawning</a>
+            </div>
+
+            <div class="imgLink">
+                <img src="generator.jpeg" alt="A picture of the resource generator." width="30%">
+                <a href="https://i.ytimg.com/vi/qJ9cLJdnNI8/sddefault.jpg">Image Source - Resourse Generator</a>
+            </div>
+
+
+
+            <button class="prev" onclick="nextStep('basic', 'step2')">&laquo; Previous
+            </button>
+            <button class="next" onclick="nextStep('gameplay', 'step4')">Next &raquo;
+            </button>
+        </section>
+
+
+
+        <section id="gameplay" class="stepContent">
+            <h2>Step 4: Gameplay techniques</h2>
+
+            <h3>Building Bridge/Bridging</h3>
+            <ul>
+                <li>Players can build bridges to connect to other islands in order to destroy others' beds.</li>
+                <li>This will need basic tools like wool.</li>
+                <li>It's important to gradually learn fast bridging techniques to quickly and efficiently reach to other
+                    teams without falling off and die. </li>
+            </ul>
+
+            <div class="imgLink">
+                <img src="bridging.jpeg" alt="An example of building a bridge with tools." width="30%">
+                <a href="https://qph.cf2.quoracdn.net/main-qimg-24c254778dbee27624a3ecffdf19b96f-lq">Image Source -
+                    Bridging</a>
+            </div>
+
+            <h3>Combat</h3>
+            <ul>
+                <li>Players engage in combat for bed protection as well as to eliminate others.</li>
+                <li>There are many ways to kill other team players, such as killing with weapons (see later in Upgrade
+                    & Purchase) and pushing people off bridges, etc.
+                </li>
+            </ul>
+
+            <div class="imgLink">
+                <img src="combat.jpeg" alt="Two players engaging in combat." width="30%">
+                <a href="https://i.ytimg.com/vi/an0UJEDYy-Y/maxresdefault.jpg">Image Source - Players' combat</a>
+            </div>
+
+
+
+            <button class="prev" onclick="nextStep('start', 'step3')">&laquo; Previous</button>
+            <button class="next" onclick="nextStep('upgrade', 'step5')">Next &raquo;</button>
+        </section>
+
+
+
+        <section id="upgrade" class="stepContent">
+            <h2>Step 5: Upgrade and purchase equipment</h2>
+
+            <h3>Upgrading Generators/Equipment</h3>
+            <p>Using the resources collected from generators, you can upgrade your weapons or tools.
+                Also, you can use diamonds to upgrade your generator and get resources in shorter time and better value.
+            </p>
+
+            <h3>Purchasing Equipment</h3>
+            <p id="addMargin">Using the resources, you can also purchase permanent weapons or tools from the <span>item
+                    shop</span> on your island.</p>
+            <a href="specialcalculation.html" id="calcLink">Go to item shop!</a>
+
+            <!--connect to item shop here-->
+
+            <h3>More about Resources</h3>
+            <p>Now, click on these buttons and follow through two additional subtasks that will help you understand
+                <span>resources</span> a bit more!
+            </p>
+
+
+            <button class="resourceLink" onclick="openInfo(event, 'table')">About Resources</button>
+            <div class="resourceInfo" id="table">
+                <p>Depending on tier level, or upgrade level, the time it takes to spawn different resources varies.
+                </p>
+
+                <table id="resourceTable">
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Descriptions</th>
+                        <th scope="col">Location</th>
+                        <th scope="col">Images</th>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Iron</th>
+                        <td>The most basic type of resource. Speed:<br>Tier 1: one every 0.5s <br>Tier 2: one every
+                            0.25s<br>Tier 3: one every 0.1s</td>
+                        <td>Base Generator at your island.</td>
+                        <td><img src="iron.webp" alt="Iron" width="80%">
+                            <a
+                                href="https://www.google.com/url?sa=i&url=https%3A%2F%2Frobloxbedwars.fandom.com%2Fwiki%2FIron&psig=AOvVaw3BFGSIKlWTWByHXVGB-j-p&ust=1716218239584000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJiUoqaBmoYDFQAAAAAdAAAAABAE">Iron</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Gold</th>
+                        <td>More valuable than iron. Speed:<br>Tier 1: one every 8s <br>Tier 2: one every 4s<br>Tier 3:
+                            one every 2s</td>
+                        <td>Base Generator at your island.</td>
+                        <td><img src="Gold.webp" alt="Gold" width="80%">
+                            <a
+                                href="https://static.wikia.nocookie.net/robloxbedwars/images/1/10/Gold.png/revision/latest/thumbnail/width/360/height/360?cb=20230808090751">Gold</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Diamonds</th>
+                        <td>More valuable than gold. Speed:<br>Tier 1: one every 30s <br>Tier 2: one every 20s<br>Tier
+                            3: one every 10s</td>
+                        <td>Diamond Generator. There are 4 Diamond Generators per match, generally in between two
+                            islands.</td>
+                        <td><img src="Diamond.webp" alt="Diamond" width="80%">
+                            <a
+                                href="https://static.wikia.nocookie.net/robloxbedwars/images/e/ea/Diamond.png/revision/latest?cb=20210528192954">Diamond</a>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Emeralds</th>
+                        <td>The most valuable resource. Speed:<br>Tier 1: one every 60s <br>Tier 2: one every
+                            40s<br>Tier 3: one every 20s</td>
+                        <td>Emerald Generator.There are 2-4 Emerald Generators, depending on the map, which are located
+                            around the middle of the map.</td>
+                        <td><img src="Emerald.webp" alt="Emerald" width="80%">
+                            <a
+                                href="https://static.wikia.nocookie.net/robloxbedwars/images/6/6a/Emerald.png/revision/latest?cb=20210528192950">Emerald</a>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <button class="resourceLink" onclick="openInfo(event, 'form')">Resources Helper</button>
+            <div class="resourceInfo" id="form">
+                <p>Did you find anything that you want to buy in the Item Store?
+                    If yes, are you ondering how you can get those RESOURCES?
+                </p>
+                <p>This is a resource infomation generator that will help you with collecting resources in Bedwars. Byentering
+                    the type of resource that you want to prioritise, the number of this resource, and your current
+                    tier, you can view where to get the resource, and the amount of time in seconds to collect your targeted
+                    amount.
+                </p>
+
+                <form id="resourceForm" onsubmit="getResource()">
+                    <!--select what to collect-->
+                    <p>Select the resource you need:</p>
+                    <select id="resources">
+                        <option value="">select...</option>
+                        <option value="iron">Iron</option>
+                        <option value="gold">Gold</option>
+                        <option value="diamonds">Diamonds</option>
+                        <option value="emeralds">Emeralds</option>
+                    </select>
+
+                    <!--enter how many-->
+                    <p>Enter the amount you need:</p>
+                    <input type="number" name="" id="amount" min="1" step="1" value="1">
+
+                    <!--enter tier/level-->
+                    <p>Select your tier/upgrade level:</p>
+                    <div>
+                        <label><input type="radio" name="tiers" value="1">Tier 1</label>
+                        <label><input type="radio" name="tiers" value="2">Tier 2</label>
+                        <label><input type="radio" name="tiers" value="3">Tier 3</label>
+                    </div>
+
+                    <button id="resourceCalculation" type="submit">
+                        Calculate!
+                    </button>
+                </form>
+
+                <div id="output">
+                    <div id="validOutput">
+                        <p id="locOutput"></p>
+                        <p id="timeOutput"></p>
+                    </div>
+                    <div id="invalidOutput">
+                        <p id="errorOutput"></p>
+                    </div>
+                </div>
+            </div>
+
+
+            <button class="prev" onclick="nextStep('gameplay', 'step4')">&laquo; Previous</button>
+            <button class="next" onclick="nextStep('tips', 'step6')">Next &raquo;</button>
+        </section>
+
+
+
+
+
+        <section id="tips" class="stepContent">
+            <h2>Tips to win</h2>
+
+            <div class="description">
+                <li><strong>Do not just defend! </strong>If you successfully rush and eliminate other enemies and beds,
+                    you
+                    may also dominate their resource generators. Therefore, you will have more resources to buy items.
+                </li>
+
+                <div class="imgLink">
+                    <img src="dont defend.jpeg" alt="Do not just defend" width="30%">
+                    <a
+                        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0oFBIEdOK8dpFKfpTl-F58CKANvmD2Yzd8HLNugCbxIosumbm">Image
+                        Source - tips1</a>
+                </div>
+            </div>
+
+            <div class="description">
+                <li><strong>Use resources wisely: </strong>Don't buy expensive items with resources too soon. Some items
+                    will
+                    not be respawned once you lost them.
+                </li>
+
+                <div class="imgLink">
+                    <img src="armour.jpeg" alt="armour" width="30%">
+                    <a
+                        href="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQsVq_y_waK6Jc5YtOdRU8znVfIGLxxrj6URTPX64jhtn-gBL1A">Image
+                        Source - tips2</a>
+                </div>
+            </div>
+
+            <div class="description">
+                <li><strong>Practice Bridging: </strong>Bridging fast at the beginning of the game allows you to rush to
+                    enemies' bases quicker before they even start building up protection for the bed.
+                </li>
+
+                <div class="imgLink">
+                    <img src="speedBridging.jpeg" alt="rushing" width="30%">
+                    <a
+                        href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fm.youtube.com%2Fwatch%3Fv%3D-Hm45LoBDMU&psig=AOvVaw0YqofCfiNvfBOa07t4yOhp&ust=1716258321439000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJCxytSWm4YDFQAAAAAdAAAAABAV">Image
+                        Source - tips3</a>
+                </div>
+            </div>
+
+
+            <button class="prev" onclick="nextStep('upgrade', 'step5')">&laquo; Previous
+            </button>
+            <button class="next" onclick="nextStep('end', 'step7')">Next &raquo;
+            </button>
+        </section>
+
+
+
+        <section id="end" class="stepContent">
+            <h2>Congrats!!!</h2>
+            <p>Now you have mastered all the basic instructions to play Bedwars, are you ready for some challenge?</p>
+
+            <div id="quizLink">
+                <a href="quiz.html" id="linkToQuiz">Test your knowledge</a>
+                <img src="goToQuiz.jpeg" alt="a right pointing arrow." width="10%" id="goToQuiz">
+            </div>
+
+            <!--Add a button to quiz/calculations here-->
+            <br>
+            <div id="links">
+                <a href="https://i.ytimg.com/vi/SIYo6cB6sbI/maxresdefault.jpg">Button Image Source</a>
+                <a
+                    href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.planetminecraft.com%2Fproject%2Fsummer-lobby-2023%2F&psig=AOvVaw0NiR1qNRS2PQVZ4s9qjvc0&ust=1716298782368000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCMDB7q6tnIYDFQAAAAAdAAAAABBj">Background
+                    Image Source</a>
+            </div>
+
+
+            <button class="prev" onclick="nextStep('tips', 'step6')">&laquo; Previous
+            </button>
+        </section>
+
+
+    </main>
+
+</body>
+
+</html>
