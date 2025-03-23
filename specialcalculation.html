@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Special Calculation</title>
+    <script type="text/javascript" src="specialcalculation.js"></script>
+    <link rel='stylesheet' href='stylingBedwars.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Freeman&display=swap" rel="stylesheet">
+</head>
+<body id="specialCalculation_body">
+    <div class="bedwarsBanner">
+        <a href = "homepage.html" ><img src="bedwarBanner.png" alt="Bedwars Banner"></a>
+    </div>
+
+    <header class="special_calculation_header">
+        <img src="logo.png" alt="Bedwar Logo" class="logo">
+        <h1 class="calculation_h1_style">Items Store</h1>
+        <img src="logo.png" alt="Bedwar Logo" class="logo">
+    </header>
+
+    <aside id="content_sidebar" class="sidebar">
+        <button id="closeButton" onclick="closeSidebar()">Close Menu</button>
+        <div><a class="menu_list" href="homepage.html">Homepage</a></div>
+        <div><a class="menu_list" href="instructions.html">How to Play</a></div>
+        <div><a class="menu_list" href="specialcalculation.html">Items Store</a></div>
+        <div><a class="menu_list" href="quiz.html">Play the Quiz</a></div>
+    </aside>
+
+    <div id="main">
+        <button id="openButton" onclick="openSidebar()">Menu</button>
+    </div>
+
+    <div class="main_content">
+        <div id="intro_para_calculation">
+            <p>Welcome to the Items store!</p>
+            <p>Explore the collection of upgrades and items and select your desired options below.</p>
+            <p>Navigate the item catalogues by using the arrow button next to each category. The various names and resource prices are displayed alongside each item.</p>
+            <p>Choose a combination of armor, weapon, special item, block and enchantment upgrades from the menu below. After making your selections, submit your choices to find out how much resources you will need for the chosen items.</p>
+        </div>
+
+        <h2 class="calculation_h2_style">Armor</h2>
+        <div class="calculation_image-container">
+            <img class="calculation_arrowimage" src="leftarrow.png" alt='Previous' onclick="changePicture('previous', 'armor')">
+            <span id="name_armor" class="calculation_info"></span>
+            <img class="calculation_imagestyling" src="diamondArmor.webp" id="current_armor">
+            <span id="price_armor" class="calculation_info"></span>
+            <img class="calculation_arrowimage" src="rightarrow.png" alt="Next" onclick="changePicture('next','armor')">    
+        </div>
+
+        <h2 class="calculation_h2_style">Weapons</h2>
+        <div class="calculation_image-container">
+            <img class="calculation_arrowimage" src="leftarrow.png" alt='Previous' onclick="changePicture('previous', 'weapon')">
+            <span id="name_weapon" class="calculation_info"></span>
+            <img class="calculation_imagestyling" src="Bow.webp" id="current_weapon">
+            <span id="price_weapon" class="calculation_info"></span>
+            <img class="calculation_arrowimage" src="rightarrow.png" alt="Next" onclick="changePicture('next', 'weapon')">    
+        </div>
+
+        <h2 class="calculation_h2_style">Special Items</h2>
+        <div class="calculation_image-container">
+            <img class="calculation_arrowimage" src="leftarrow.png" alt='Previous' onclick="changePicture('previous', 'specialItems')">
+            <span id="name_specialItems" class="calculation_info"></span>
+            <img class="calculation_imagestyling" src="Invisibility_Potion.webp" id="current_specialItems">
+            <span id="price_specialItems" class="calculation_info"></span>
+            <img class="calculation_arrowimage" src="rightarrow.png" alt="Next" onclick="changePicture('next', 'specialItems')">    
+        </div>
+
+        <h2 class="calculation_h2_style">Blocks</h2>
+        <div class="calculation_image-container">
+            <img class="calculation_arrowimage" src="leftarrow.png" alt='Previous' onclick="changePicture('previous', 'blocks')">
+            <span id="name_blocks" class="calculation_info"></span>
+            <img class="calculation_imagestyling" src="White_Wool.webp" id="current_block">
+            <span id="price_blocks" class="calculation_info"></span>
+            <img class="calculation_arrowimage" src="rightarrow.png" alt="Next" onclick="changePicture('next', 'blocks')">    
+        </div>
+
+        <h2 class="calculation_h2_style">Enchantment Upgrades</h2>
+        <div class="calculation_image-container">
+            <img class="calculation_arrowimage" src="leftarrow.png" alt='Previous' onclick="changePicture('previous', 'enchantment')">
+            <span id="name_enchantments" class="calculation_info"></span>
+            <img class="calculation_imagestyling" src="Fire_Enchant.webp" id="current_enchantment">
+            <span id="price_enchantments" class="calculation_info"></span>
+            <img class="calculation_arrowimage" src="rightarrow.png" alt="Next" onclick="changePicture('next', 'enchantment')">    
+        </div>
+
+        <div id="calculation_style">
+                <h2 class="calculation_title_style">Item Calculation</h2>
+                <form class="calculation_form">
+                    <div id="calculation_progress_bar" class="calculation_progress_bar">
+                        <div id="calculation_bar" class="calculation_bar"></div>
+                    </div>
+
+                    <p class="options_placeholder_calculations">Select an armor:</p>
+                    <select id="armor_selection" class="options_style">
+                        <option value="">Select Armour</option>
+                        <option>Iron Armor</option>
+                        <option>Diamond Armor</option>
+                        <option>Emerald Armor</option>
+                        <option>Leather Armor</option>
+                        <option>Void Armor</option>
+                        <option>Warrior Armor</option>
+                    </select>
+
+                    <p class="options_placeholder_calculations">Select a weapon:</p>
+                    <select id="weapon_selection" class="options_style">
+                        <option value="">Select Weapon</option>
+                        <option>Iron Sword</option>
+                        <option>Stone Sword</option>
+                        <option>Diamond Sword</option>
+                        <option>Wood Sword</option>
+                        <option>Bow</option>
+                    </select>
+
+                    <p class="options_placeholder_calculations">Select a special item:</p>
+                    <select id="specialItems_selection" class="options_style">
+                        <option value="">Select special item</option>
+                        <option>Invisible Potion</option>
+                        <option>Speed Potion</option>
+                        <option>Golden Apple</option>
+                        <option>TNT</option>
+                        <option>Fireball</option>
+                    </select>
+
+                    <p class="options_placeholder_calculations">Select a type of block:</p>
+                    <select id="block_selection" class="options_style">
+                        <option value="">Select block</option>
+                        <option>Wool</option>
+                        <option>Clay</option>
+                        <option>Endstone</option>
+                        <option>Wood</option>
+                        <option>Obsidian</option>
+                    </select>
+
+                    <p class="options_placeholder_calculations">Select an enchantment upgrade:</p>
+                    <select id="enchantment_selection" class="options_style">
+                        <option value="">Select enchantment</option>
+                        <option>Fire Enchant</option>
+                        <option>Static Enchant</option>
+                        <option>Execute Enchant</option>
+                        <option>Plunder Enchant</option>
+                        <option>Critical Strike</option>
+                        <option>Life Steal</option>
+                        <option>Volley</option>
+                        <option>Sticky Enchant</option>
+                        <option>Forest Enchant</option>
+                        <option>Rapid Regeneration</option>
+                        <option>Shield Generation</option>
+                    </select>
+
+                    <div>
+                            <button type="button" id="resetButton" class="calculation_button_style" onclick="reset()">Reset</button>
+                            <button type="button" id='submitButton' class="calculation_button_style" onclick="process()">Submit</button>
+                    </div>
+                </form>
+
+        </div>
+            <div id="popUp" class="popUp" >
+                <div class="popUpContent">
+                    <span class="closeButton" id="closePopup">&times;</span>
+                    <h2 class="calculation_h2_style">Total Resources Required:</h2>
+                    <p>Total Emeralds: <span id="totalEmeralds"></span></p>
+                    <p>Total Gold: <span id="totalGold"></span></p>
+                    <p>Total Irons: <span id="totalIron"></span></p>
+                    <p>Total Diamonds: <span id="totalDiamond"></span></p>
+                </div>
+            </div>
+    </div>
+   
+</body>
+</html>
+

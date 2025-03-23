@@ -1,0 +1,1023 @@
+/* Define colour variables for use throughout the website. */
+:root {
+    --red: #ae170f;
+    --yellow: #D9AE5F;
+    --gray: #595959;
+    --green: #3B7314;
+}
+
+/* Import a font for use throughout the website. */
+@font-face {
+    font-family: 'Monocraft';
+    src: url('fonts/Monocraft') format('ttf'),
+}
+
+/* Style all pages, apply the font for all texts. */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Monocraft';
+}
+
+/* Bedwars title on every webpage */
+.bedwarsBanner {
+    text-align: center;
+}
+
+/* Style the button for entering a new player name. */
+#newPlayer {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #111;
+    color: white;
+    border: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-family: "Monocraft";
+    box-shadow: 5px 5px var(--gray);
+}
+
+#newPlayer:hover {
+    background-color: var(--red);
+}
+
+
+/* Style menu for all pages */
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: absolute;
+    background-color: var(--gray);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-sizing: border-box;
+    left: -200px;
+    transition: left 0.5s;
+    overflow-y: auto;
+    font-family: "Monocraft";
+    color: white;
+}
+
+#openButton {
+    z-index: 3;
+    position: fixed;
+}
+
+/* Changes color of menu content as user hovers over the link */
+.sidebar a:hover {
+    background-color: var(--red);
+}
+
+/* Divides menu bar into sections that change color as user hovers over link*/
+.sidebar a {
+    display: block;
+    padding: 52px;
+    margin: 10px 0;
+    background-color: var(--gray);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    text-align: center;
+}
+
+/* In instructions page: style the background image. */
+#HTPbody {
+    font-family: 'Monocraft';
+    background-image: url('instructBackground.webp');
+    background-attachment: fixed;
+    background-size: cover;
+
+}
+
+/* In instructions page: style the heading. */
+.HTPheading {
+    background-color: whitesmoke;
+    background: rgba(245, 245, 245, 0.88);
+    padding: 1vw;
+    margin: 1.5vw;
+    box-shadow: 20px 20px;
+}
+
+.HTPheading h1 {
+    text-align: center;
+    font-size: 5vw;
+}
+
+.HTPheading h2 {
+    text-align: center;
+    font-size: 3vw;
+}
+
+/* In instructions page: style the main information part. */
+#mainContent {
+    display: flex;
+    background-color: whitesmoke;
+    background: rgba(245, 245, 245, 0.88);
+    margin: 1.5vw;
+    margin-top: 2.5vw;
+    padding: 3vw;
+    padding-top: 0.2vw;
+    position: relative;
+    z-index: 1;
+}
+
+#mainContent h3,
+#mainContent p {
+    padding-top: 1vw;
+}
+
+
+/* In instructions page: style the extra side menu. */
+.steps {
+    float: left;
+    width: 23%;
+    height: auto;
+    margin: 1.5vw;
+    margin-top: 2.5vw;
+    position: relative;
+    z-index: 2;
+}
+
+/* Style the buttons that are used to open the steps */
+.steps button {
+    font-size: 2vw;
+    text-align: left;
+    display: block;
+    background-color: var(--gray);
+    border: none;
+    outline: none;
+    width: 100%;
+    padding: 2vw;
+}
+
+button#step7 {
+    padding: 2%;
+    padding-bottom: 0%;
+}
+
+/* In instructions page: style the next and prev buttons */
+
+main button.next {
+    font-size: large;
+    text-align: center;
+    border: 2px solid black;
+    outline: none;
+    width: 11%;
+    padding: 1vw;
+    position: fixed;
+    right: 4vw;
+    bottom: 3vw;
+    box-shadow: 8px 8px var(--gray);
+}
+
+main button.prev {
+    font-size: large;
+    text-align: center;
+    border: 2px solid black;
+    outline: none;
+    width: 11%;
+    padding: 1vw;
+    position: fixed;
+    right: 16vw;
+    bottom: 3vw;
+    box-shadow: 8px 8px var(--gray);
+}
+
+/* Change background color of buttons on hover */
+main button:hover {
+    background-color: var(--red);
+}
+
+/* Magnifies the steps button on hover */
+.steps button:hover {
+    font-size: 2.5vw;
+    width: 30vw;
+    height: 10vw;
+    transition: 0.2s;
+}
+
+/* Create an active/current steps button class */
+.steps button.active {
+    background-color: var(--red);
+    width: 25vw;
+}
+
+/* Make the text content other than step 1 hidden at default */
+.stepContent {
+    padding: 1vw;
+    display: none;
+}
+
+#welcome {
+    display: block;
+}
+
+/* Emphasise partial texts. */
+span {
+    color: var(--red);
+}
+
+/* Style buttons for the additional resource information. */
+.resourceLink {
+    background-color: var(--gray);
+    color: white;
+    padding: 2vw;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.5s;
+    font-size: 2vw;
+    font-family: 'Monocraft';
+    margin-top: 1vw;
+}
+
+/* Add a background color to the button if it is clicked on or hover */
+.resourceLink.active,
+.resourceLink:hover {
+    background-color: var(--green);
+}
+
+/* Style the buttons hidden at default. */
+.resourceInfo {
+    display: none;
+}
+
+.resourceInfo.active {
+    display: block;
+
+}
+
+/* Styling contents in all the steps */
+main h2 {
+    font-size: 3vw;
+}
+
+main h3 {
+    font-size: 2vw;
+}
+
+a {
+    color: var(--red);
+}
+
+main img {
+    width: 50%;
+}
+
+.imgLink {
+    margin: 2vw;
+}
+
+#resourceTable {
+    margin: 1vw;
+}
+
+#resourceTable th,
+#resourceTable td {
+    border: 1px solid;
+    border-collapse: collapse;
+    padding: 1vw;
+    margin: 2vw;
+}
+
+th {
+    background-color: var(--yellow);
+}
+
+#resourceTable img {
+    width: 100%;
+}
+
+/* Styling the additional resource calculation */
+#resourceForm {
+    text-align: center;
+    background-color: var(--yellow);
+    margin: 1vw;
+    padding: 1vw;
+}
+
+button#resourceCalculation {
+    width: 80%;
+    font-size: 1.2vw;
+    padding: 1vw;
+    margin: 1vw;
+    margin-top: 2vw;
+}
+
+input,
+select {
+    padding: 1vw;
+    margin: 1vw;
+}
+
+div#invalidOutput {
+    color: white;
+    font-size: 1.2vw;
+    text-align: center;
+    background-color: var(--red);
+    margin: 1vw;
+    margin-bottom: 3vw;
+    padding: 1vw;
+    padding-bottom: 2vw;
+}
+
+div#validOutput {
+    color: white;
+    font-size: 1.2vw;
+    text-align: center;
+    background-color: var(--green);
+    margin: 1vw;
+    margin-bottom: 3vw;
+    padding: 1vw;
+    padding-bottom: 2vw;
+}
+
+div#output {
+    display: none;
+}
+
+#calcLink {
+    background-color: var(--gray);
+    height: 100px;
+    padding: 1vw;
+    margin: 15vw;
+    margin-top: 20vw;
+    color: white;
+    font-size: 3vw;
+    text-decoration: none;
+}
+
+#calcLink:hover {
+    background-color: var(--red);
+}
+
+#addMargin {
+    margin-bottom: 1vw;
+}
+
+#goToQuiz {
+    margin: 1vw;
+    margin-top: 3vw;
+    width: 10vw;
+}
+
+#linkToQuiz {
+    background-color: var(--gray);
+    height: 100px;
+    padding: 1vw;
+    margin: 1vw;
+    margin-top: 6vw;
+    color: white;
+    font-size: 3vw;
+    text-decoration: none;
+}
+
+#linkToQuiz:hover {
+    background-color: var(--red);
+}
+
+#links {
+    margin-top: 5vw;
+}
+
+#quizLink {
+    display: flex;
+}
+
+ol,
+ul {
+    padding-left: 2vw;
+}
+
+
+
+/* homepage styling */
+
+footer {
+    text-align: center;
+    font-size: 2vw;
+    background-color: var(--red);
+    padding: 1vw;
+    color: white;
+    margin: 1vw;
+}
+
+#homepage_body {
+    background-image: url('homepageBackground.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.homepage_img {
+    width: 375px;
+    height: auto;
+    margin: 30px;
+}
+
+.homepage_table_style {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+.homepage_table_style td {
+    text-align: center;
+    padding: 10px;
+}
+
+.homepage_maintext_style {
+    font-family: 'Monocraft';
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    background-color: white;
+    box-shadow: 10px 15px var(--gray);
+    padding: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.homepage_h2_style {
+    font-family: 'Monocraft';
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 50px;
+    font-style: normal;
+    text-align: center;
+    color: var(--red);
+    text-shadow: 3px 3px var(--gray);
+    background-color: white;
+    box-shadow: 10px 15px var(--gray);
+    margin-top: 15px;
+}
+
+/* enter playername popup box styling */
+#openPopUp {
+    display: block;
+}
+
+.popUp {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+.popUpContent {
+    margin: 15% auto;
+    padding: 20px;
+    border: 5px solid #888;
+    width: 80%;
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+    background: #C6B9CC;
+    border: 3px solid;
+    padding: 10px;
+    box-shadow: 10px 20px #888888;
+    font-family: "Monocraft";
+    font-weight: 400px;
+    font-style: normal;
+    text-align: center;
+    font-size: 20px;
+    color: var(--red);
+    background-color: white;
+}
+
+.popUp_h2 {
+    font-family: 'Monocraft';
+    text-align: center;
+    font-size: 80px;
+    color: var(--red);
+    text-shadow: 3px 3px var(--gray);
+}
+
+.popUp_main {
+    font-family: 'Monocraft';
+    text-align: center;
+    font-size: 50px;
+    color: var(--gray);
+    margin-bottom: 20px;
+}
+
+/* styles name submit button*/
+.nameButton {
+    color: var(--red);
+    margin: 10px;
+    font-size: 30px;
+    font-family: "Jaro", sans-serif;
+    height: 50px;
+    width: 1100px;
+    background-color: #888;
+    box-sizing: border-box;
+}
+
+/* changes color of submit button as user hovers over it */
+.nameButton:hover {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.closeButton {
+    float: right;
+    text-align: right;
+}
+
+.nameInputBox {
+    height: 50px;
+    box-sizing: border-box;
+    width: 1100px;
+    margin: 10px;
+}
+
+/* special calculation page styling */
+#specialCalculation_body {
+    background-image: url(specialCalculationBackground.webp);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+
+.special_calculation_header {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    padding: 25px;
+    justify-content: center;
+}
+
+.logo {
+    width: 20%;
+    height: auto;
+}
+
+/* next and previous arrow buttons */
+.calculation_arrowimage {
+    width: 100px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* item image */
+.calculation_imagestyling {
+    text-align: center;
+    width: 400px;
+    position: relative;
+}
+
+
+.calculation_image-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* resource calculation popup */
+.popUp {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: #C6B9CC;
+}
+
+.popUpContent {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.closeButton {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* mainn text on special calculation page */
+#intro_para_calculation {
+    box-shadow: 10px 15px var(--gray);
+    padding: 10px;
+    font-family: 'Monocraft';
+    font-weight: 400px;
+    font-style: normal;
+    text-align: center;
+    font-size: 20px;
+    color: var(--red);
+    background-color: white;
+}
+
+#calculation_style {
+    background: white;
+}
+
+.calculation_h1_style {
+    font-family: "Monocraft";
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 100px;
+    font-style: normal;
+    text-align: center;
+    color: var(--red);
+    padding: 0;
+    margin: 0;
+    margin: 0 auto;
+}
+
+.calculation_h2_style {
+    font-family: "Monocraft";
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 70px;
+    font-style: normal;
+    text-align: center;
+    color: white;
+    background-color: var(--red);
+    margin-top: 25px;
+}
+
+.calculation_info {
+    font-family: "Monocraft";
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-size: 50px;
+    font-style: normal;
+    text-align: center;
+    color: var(--red);
+    background-color: white;
+}
+
+
+.main_content {
+    transition: margin-left 0.5s;
+    padding: 20px;
+}
+
+#main {
+    padding: 16px;
+}
+
+#openButton {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #111;
+    color: white;
+    border: none;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-family: "Monocraft";
+    box-shadow: 5px 5px var(--gray);
+}
+
+#openButton:hover {
+    background-color: var(--red);
+}
+
+#closeButton {
+    font-size: 20px;
+    padding: 10px 15px;
+    background-color: #111;
+    color: white;
+    border: none;
+    position: center;
+    font-family: "Monocraft";
+}
+
+#closeButton:hover {
+    background-color: var(--red);
+}
+
+
+.calculation_title_style {
+    font-family: "Monocraft";
+    text-shadow: var(--gray);
+    font-optical-sizing: auto;
+    font-weight: 350px;
+    font-size: 80px;
+    font-style: normal;
+    text-align: center;
+    color: var(--red);
+    padding: 0;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+.options_style {
+    width: 100%;
+    height: 100%;
+    color: black;
+    text-align: center;
+    background-color: white;
+    font-family: 'Monocraft';
+    font-size: 30px;
+    border: 1px solid;
+    cursor: pointer;
+    transition: background-color 0.3;
+    margin-bottom: 20px;
+}
+
+.options_placeholder_calculations {
+    font-family: 'Monocraft';
+    font-weight: 400px;
+    font-style: normal;
+    text-align: center;
+    font-size: 50px;
+    color: var(--red);
+    text-shadow: 2px 2px var(--gray);
+    margin-top: 10px;
+}
+
+
+.calculation_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#submitButton {
+    margin: 20px auto;
+    text-align: center;
+    display: block;
+}
+
+aside {
+    font-family: "Freeman", sans-serif;
+}
+
+.menu_list {
+    text-align: center;
+    flex: 1;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.author_text {
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.calculation_progress_bar {
+    width: 100%;
+    background-color: var(--gray);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.calculation_bar {
+    width: 0%;
+    height: 50px;
+    background-color: var(--gray);
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.calculation_button_style {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: white;
+    color: #111;
+    border: none;
+    width: 100px;
+}
+
+.progress_percentages {
+    width: auto;
+    font-family: 'Monocraft';
+    font-weight: 400px;
+    font-style: normal;
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    background-color: var(--red);
+    position: relative;
+}
+
+.calculation_button_style:hover {
+    background-color: var(--red);
+    color: aliceblue;
+}
+
+.homepage_img:hover {
+    transform: scale(1.2);
+}
+
+
+
+/* quiz styling */
+
+
+/*  Creating a container where the quiz will be displayed*/
+
+.container-bedwar-quiz {
+    background: #ffffff;
+    margin: 100px;
+    border-radius: 10px;
+    padding: 30px;
+    margin-top: 10px;
+    size: 70%;
+
+}
+
+/* Header style within the container */
+.container-bedwar-quiz h1 {
+    font-size: 50px;
+    color: var(--red);
+    font-weight: 600;
+    padding-bottom: 30px;
+}
+
+.quiz {
+    padding: 20px 0;
+    text-align: center;
+    margin: auto;
+}
+
+.quiz h2 {
+    font-size: 18px;
+    color: var(--red);
+    font-weight: 600px;
+    text-align: center;
+
+}
+/* style for the answer buttons */
+.btn-bedwar-quiz {
+    background-color: #fff;
+    color: var(--red);
+    font-weight: 500;
+    width: 45%;
+    margin: 10px 2.5%;
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    box-shadow: 5px 5px #470000;
+    height: 50%;
+    height: 100px;
+    font-size: 18px;
+    border: 1px solid #222;
+    padding: 10px;
+
+
+
+}
+
+/* hover effects for the buttons when not disabled */
+.btn-bedwar-quiz:hover:not([disabled]) {
+    background-image: linear-gradient(rgb(38, 1, 1), rgb(112, 0, 0));
+    color: #fff;
+    box-shadow: 5px 5px #470000;
+
+}
+
+.btn-bedwar-quiz:disabled {
+    cursor: no-drop
+}
+
+#next-btn {
+    background-color: #4d0000;
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    margin-right: 4.5%;
+    float: right;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px;
+
+}
+
+/* style for correct answer */
+.right {
+    background: #9aeabc;
+}
+
+/* style for wrong asnwer */
+.wrong {
+    background: #ff9393;
+}
+
+.h1-bedwar-quiz {
+    text-align: center;
+    font-size: 120px;
+}
+
+/* Container for the answer options */
+#answer-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    font-size: 18px;
+}
+
+.img-bedwar-quiz {
+    width: 80%;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.img-bedwar-quiz:hover {
+    opacity: 1;
+
+}
+
+/* background line colour for the progress line */
+#progress-line {
+    width: 90%;
+    background-color: #cdcdcd;
+    margin: 20px 0;
+    display: block;
+    border-radius: 15px;
+    margin: 20px auto;
+}
+
+/* setting up progress to green */
+#progress-bar {
+    transition: ease-in 0.3s;
+    background-color: #00bc13;
+    border-radius: 15px;
+    height: 20px;
+
+
+
+}
+
+#banner-bedwar-quiz {
+    text-align: center;
+}
+
+
+/* setting up a background image */
+.body-bedwar-quiz {
+    background-image: url("maxresdefault.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    
+
+    background-position: center;
+    margin: 0;
+    height: 100%;
+
+}
+
+.html-bedwar-quiz {
+    height: 100%;
+
+}
+
+.p-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* paragraph styling */
+.p-style-bedwar-quiz {
+    text-align: center;
+    text-decoration: underline;
+    margin: 20px;
+    color: #ff0000;
+
+}
+
+/* hover effect on paragraph styling */
+.p-style-bedwar-quiz:hover {
+    font-size: 18px;
+    text-shadow: 2px 2px 5px #001208;
+
+}

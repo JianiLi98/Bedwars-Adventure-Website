@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" class="html-bedwar-quiz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BedWars Quiz</title>
+    <link rel="stylesheet" href="stylingBedwars.css">
+</head>
+
+<div class="bedwarsBanner">
+    <a href="homepage.html"><img src="bedwar banner.png" alt="bedwar banner"></a>
+    
+</div>
+
+<body class="body-bedwar-quiz">
+
+    <aside id="content_sidebar" class="sidebar">
+        <button id="closeButton" onclick="closeSidebar()">Close Menu</button>
+        <div><a class="menu_list" href="homepage.html">Homepage</a></div>
+        <div><a class="menu_list" href="instructions.html">How to Play</a></div>
+        <div><a class="menu_list" href="specialcalculation.html">Items Store</a></div>
+        <div><a class="menu_list" href="quiz.html">Play the Quiz</a></div>
+    </aside>
+
+    <div id="main">
+        <button id="openButton" onclick="openSidebar()">Menu</button>
+    </div>
+
+    <div class="container-bedwar-quiz">
+        <div id="progress-line">
+            <div id="progress-bar"></div>
+        </div>
+        <h1 class="h1-bedwar-quiz">Bedwars Quiz</h1>
+
+        <div class="quiz">
+            <div id="question"></div>
+            <div id="answer-options">
+                <button class="btn-bedwar-quiz">Answer 1</button>
+                <button class="btn-bedwar-quiz">Answer 2</button>
+                <button class="btn-bedwar-quiz">Answer 3</button>
+                <button class="btn-bedwar-quiz">Answer 4</button>
+            </div>
+            <button id="next-btn">next</button>
+        </div>
+    </div>
+
+    <script src="bedwar_quiz.js"></script>
+</body>
+
+</html>
