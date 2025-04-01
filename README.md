@@ -1,4 +1,4 @@
-# Bedwars Adventure – 🛏️ 🛡️ ⚔️ Interactive Website for Beginners to play Bedwars
+# 🛏️ 🛡️ ⚔️ Bedwars Adventure – Interactive Website for Beginners to play Bedwars
 
 An interactive, aesthetic, and educational website designed to teach players how to master **Bedwars**, the popular Minecraft mini-game.  
 Built during subject **COMP10003 Media Computation** at the University of Melbourne (Year 1).
