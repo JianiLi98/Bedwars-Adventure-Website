@@ -54,6 +54,9 @@ Built during subject **COMP10003 Media Computation** at the University of Melbou
 
 ## 📸 Screenshots
 
+Greeting Message| Homepage                    | How to Play                 | Item Store                 | Quiz                       |
+---------------------------|-----------------------------|-----------------------------|----------------------------|----------------------------|
+![Greeting](./assets/greeting.png)| ![Home](./assets/home.png)  | ![Tutorial](./assets/howtoplay.png)  | ![Store](./assets/store.png)  | ![Quiz](./assets/quiz.png) |
 
 
 ---
